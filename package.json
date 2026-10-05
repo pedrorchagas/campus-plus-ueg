@@ -1,0 +1,19 @@
+{
+  "name": "campus-plus-prototipo",
+  "version": "0.1.0",
+  "description": "Protótipo navegável do Campus+ para elicitação de requisitos (técnica de prototipação)",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

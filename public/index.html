@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>Campus+ · Protótipo</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231d4ed8'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>C+</text></svg>">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="proto-banner" role="note">
+    Protótipo para elicitação · dados fictícios · <button type="button" class="link" data-action="about">o que está fora do escopo?</button>
+  </div>
+
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#/inicio"><span class="logo">C+</span> Campus+</a>
+      <nav id="side-nav"></nav>
+      <div class="sidebar-foot" id="side-foot"></div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a class="brand brand-mobile" href="#/inicio"><span class="logo">C+</span> Campus+</a>
+        <div class="topbar-actions">
+          <label class="role-switch" title="Perfil simulado (para alternar entre os públicos testados)">
+            <span class="sr-only">Perfil simulado</span>
+            <select id="role-select" aria-label="Perfil simulado"></select>
+          </label>
+          <a href="#/notificacoes" class="icon-btn" aria-label="Notificações" id="bell">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5-6.71V3.5a2 2 0 1 0-4 0v.79A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2Z"/></svg>
+            <span class="badge" id="bell-badge" hidden></span>
+          </a>
+          <a href="#/perfil" class="avatar-btn" aria-label="Meu perfil" id="avatar-btn">AS</a>
+        </div>
+      </header>
+
+      <main id="view" tabindex="-1" aria-live="polite"></main>
+    </div>
+  </div>
+
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navegação principal"></nav>
+
+  <button type="button" class="fab-finding" id="fab-finding" hidden aria-label="Registrar achado">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h16v12H5.17L4 17.17V4Zm0-2a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4Zm7 3h2v5h-2V5Zm0 7h2v2h-2v-2Z"/></svg>
+    <span>Achado</span>
+  </button>
+
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" hidden></section>
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
